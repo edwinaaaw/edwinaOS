@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#74a9d7">
+    <meta name="description" content="EDWINA OS 互动个人档案">
+    <title>EDWINA OS</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#before-ai-icon" data-copy="nav.skip"></a>
+
+    <div id="boot-screen" class="boot-screen" aria-live="polite">
+      <div class="boot-panel">
+        <span class="boot-mark" aria-hidden="true"></span>
+        <strong data-copy="boot.title"></strong>
+        <span id="boot-copy" data-copy="boot.loading"></span>
+        <span class="boot-progress" aria-hidden="true"><i id="boot-progress-fill"></i></span>
+      </div>
+    </div>
+
+    <div id="os-desktop" class="desktop-shell art-master-mode" role="application" aria-label="EDWINA OS">
+      <img
+        id="desktop-art-master"
+        class="desktop-art-master"
+        src="./desktop-closed-v2.png"
+        width="1586"
+        height="992"
+        alt=""
+        aria-hidden="true"
+      >
+      <header class="desktop-system-titlebar">
+        <span class="system-mark" aria-hidden="true"></span>
+        <strong data-copy="app.title"></strong>
+        <div class="system-controls" aria-hidden="true"><span>_</span><span>□</span><span>×</span></div>
+      </header>
+
+      <div class="desktop-wallpaper" aria-hidden="true">
+        <span class="cloud cloud-one"></span>
+        <span class="cloud cloud-two"></span>
+        <span class="cloud cloud-three"></span>
+        <span class="grass-detail grass-one"></span>
+        <span class="grass-detail grass-two"></span>
+        <span class="flower-patch flower-one"></span>
+        <span class="flower-patch flower-two"></span>
+      </div>
+
+      <section class="desktop-icons" aria-label="桌面应用">
+        <button class="desktop-icon icon-mail" id="mail-icon" type="button" data-desktop-app="mail" data-copy="desktop.mail"></button>
+        <button class="desktop-icon icon-camera" id="before-ai-icon" type="button" data-desktop-app="before-ai" data-copy="desktop.beforeAi"></button>
+        <button class="desktop-icon icon-computer" id="ai-lab-icon" type="button" data-desktop-app="ai-lab" data-copy="desktop.aiLab" aria-disabled="true"></button>
+        <button class="desktop-icon icon-notebook" id="observations-icon" type="button" data-desktop-app="observations" data-copy="desktop.observations" aria-disabled="true"></button>
+      </section>
+
+      <div class="edwina-guide" id="edwina-guide" aria-hidden="true">
+        <div class="guide-bubble" id="guide-bubble"></div>
+        <div class="guide-sprite"></div>
+      </div>
+
+      <section id="mail-window" class="desktop-window small-desktop-window" hidden tabindex="-1" aria-labelledby="mail-window-title">
+        <header class="desktop-window-titlebar">
+          <strong id="mail-window-title" data-copy="mail.title"></strong>
+          <div class="mail-window-controls">
+            <button class="desktop-window-close" type="button" data-close-desktop-app="mail" data-copy-aria="window.close">×</button>
+          </div>
+        </header>
+        <div class="mail-window-body">
+          <div class="mail-object" aria-hidden="true">
+            <span class="mail-envelope-art"><i></i></span>
+            <span class="mail-new-stamp">NEW</span>
+          </div>
+          <article class="mail-paper">
+            <p class="mail-meta" data-copy="mail.meta"></p>
+            <h2 data-copy="mail.heading"></h2>
+            <p data-copy="mail.body"></p>
+            <p class="mail-contact">
+              <a href="mailto:guoyinfan@126.com" data-copy="mail.contact"></a><br>
+              <a href="mailto:guoyinfan@126.com" data-copy="mail.email"></a> / <a href="tel:17859751023" data-copy="mail.phone"></a>
+            </p>
+            <div class="mail-actions">
+              <button class="os-button mail-primary-action" id="mail-open-before" type="button" data-copy="mail.openBefore"></button>
+              <button class="os-button mail-secondary-action" id="mail-quick-browse" type="button" data-copy="start.quick"></button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="memory-files-window" class="desktop-window memory-files-window" hidden aria-labelledby="memory-files-title">
+        <header class="desktop-window-titlebar">
+          <strong id="memory-files-title" data-copy="window.memoryFiles"></strong>
+          <div class="desktop-window-controls">
+            <span aria-hidden="true">_</span><span aria-hidden="true">□</span>
+            <button id="close-memory-files" class="desktop-window-close" type="button" data-close-desktop-app="before-ai" data-copy-aria="window.close">×</button>
+          </div>
+        </header>
+
+        <div class="memory-files-content">
+          <nav class="os-toolbar" aria-label="主要操作">
+            <button class="os-button" id="quick-browse" type="button" data-copy="nav.quickBrowse"></button>
+            <button class="os-button" id="reset-investigation" type="button" data-copy="nav.reset"></button>
+          </nav>
+          <div class="toolbar-progress" id="toolbar-progress" aria-live="polite"></div>
+
+          <main id="case-wall" class="case-wall" tabindex="-1">
+            <section class="wall-intro" aria-labelledby="wall-title">
+              <p class="wall-kicker" data-copy="wall.kicker"></p>
+              <h1 id="wall-title" data-copy="wall.title"></h1>
+              <p class="wall-deck" data-copy="wall.intro"></p>
+              <p class="wall-instruction" data-copy="wall.instruction"></p>
+            </section>
+
+            <p class="wall-mission-hud" data-copy="wall.instruction"></p>
+
+            <section class="investigation-board" aria-label="五个案件线索墙">
+              <div class="thread-lines" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div id="case-nodes" class="case-nodes"></div>
+              <button id="conclusion-file" class="conclusion-file" type="button" disabled>
+                <span class="file-fold" aria-hidden="true"></span>
+                <strong data-copy="conclusion.title"></strong>
+                <span id="conclusion-state" data-copy="wall.conclusionLocked"></span>
+              </button>
+            </section>
+
+            <aside class="guide-console" aria-live="polite">
+              <p id="guide-copy" data-copy-id="guide.start"></p>
+            </aside>
+
+            <section class="chapter-gate" aria-labelledby="ai-gate-title">
+              <div>
+                <p class="gate-label" data-copy="wall.progress"></p>
+                <h2 id="ai-gate-title" data-copy="ai.title"></h2>
+                <p id="ai-gate-copy"></p>
+              </div>
+              <button class="os-button primary" id="ai-gate" type="button" disabled data-copy="wall.aiLocked"></button>
+            </section>
+          </main>
+        </div>
+      </section>
+
+      <nav id="start-menu" class="start-menu" aria-label="Start menu" hidden>
+        <strong data-copy="app.title"></strong>
+        <button type="button" data-desktop-app="before-ai" data-copy="start.beforeAi"></button>
+        <button type="button" data-desktop-app="ai-lab" data-copy="start.aiLab" aria-disabled="true"></button>
+        <button type="button" id="start-quick-browse" data-copy="start.quick"></button>
+      </nav>
+
+      <footer class="desktop-taskbar">
+        <button class="start-button" id="start-button" type="button" aria-expanded="false">
+          <span class="start-pixels" aria-hidden="true"></span><span data-copy="desktop.start"></span>
+        </button>
+        <div class="task-status" id="desktop-status" aria-live="polite" data-copy="desktop.ready"></div>
+        <time id="desktop-clock"></time>
+      </footer>
+    </div>
+
+    <dialog id="case-dialog" class="os-dialog" aria-labelledby="case-dialog-title">
+      <article class="case-window">
+        <header class="dialog-titlebar">
+          <strong id="case-dialog-title"></strong>
+          <button class="window-close" type="button" data-close="case-dialog" data-copy-aria="window.close">×</button>
+        </header>
+        <div class="case-tabs" role="tablist" aria-label="案件查看方式">
+          <button id="art-tab" role="tab" aria-controls="art-panel" aria-selected="true" type="button" data-copy="case.tabArt"></button>
+          <button id="evidence-tab" role="tab" aria-controls="evidence-panel" aria-selected="false" type="button" data-copy="case.tabEvidence"></button>
+        </div>
+        <div id="art-panel" role="tabpanel" aria-labelledby="art-tab"></div>
+        <div id="evidence-panel" role="tabpanel" aria-labelledby="evidence-tab" hidden></div>
+      </article>
+    </dialog>
+
+    <dialog id="quick-dialog" class="os-dialog compact-dialog" aria-labelledby="quick-dialog-title">
+      <article class="case-window">
+        <header class="dialog-titlebar">
+          <strong id="quick-dialog-title" data-copy="quick.title"></strong>
+          <button class="window-close" type="button" data-close="quick-dialog" data-copy-aria="window.close">×</button>
+        </header>
+        <div class="quick-content">
+          <p data-copy="quick.intro"></p>
+          <div id="quick-case-list" class="quick-case-list"></div>
+          <button class="os-button primary" id="quick-ai" type="button" data-copy="quick.ai"></button>
+        </div>
+      </article>
+    </dialog>
+
+    <dialog id="chapter-dialog" class="os-dialog compact-dialog" aria-labelledby="chapter-title">
+      <article class="case-window">
+        <header class="dialog-titlebar">
+          <strong id="chapter-title"></strong>
+          <button class="window-close" type="button" data-close="chapter-dialog" data-copy-aria="window.close">×</button>
+        </header>
+        <div class="chapter-content">
+          <div class="chapter-portal" aria-hidden="true"><span></span></div>
+          <p id="chapter-copy"></p>
+          <div id="ai-project-list" class="ai-project-list" hidden></div>
+          <section id="ai-project-view" class="ai-project-view" hidden aria-labelledby="ai-project-view-title">
+            <div class="ai-project-view-toolbar">
+              <button id="ai-project-back" class="os-button" type="button" data-copy="ai.back"></button>
+              <h3 id="ai-project-view-title" tabindex="-1"></h3>
+            </div>
+            <div id="ai-project-content"></div>
+          </section>
+        </div>
+      </article>
+    </dialog>
+
+    <script defer src="./content.js"></script>
+    <script defer src="./state.js"></script>
+    <script defer src="./desktop-art.js"></script>
+    <script defer src="./guide-motion.js"></script>
+    <script defer src="./app.js"></script>
+  </body>
+</html>
