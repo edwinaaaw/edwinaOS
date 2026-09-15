@@ -167,9 +167,9 @@ const AI_PROJECTS = [
       "kind": "ai.sheownstheworld.kind",
       "summary": "ai.sheownstheworld.summary"
     },
-    "url": "https://edwinaaaw.github.io/sheownstheworld/",
+    "url": "https://edwinaaaw.github.io/she-owns-the-world/",
     "actionId": "ai.play",
-    "repoUrl": "https://github.com/edwinaaaw/sheownstheworld"
+    "repoUrl": "https://github.com/edwinaaaw/she-owns-the-world"
   },
   {
     "id": "brain-starter",
